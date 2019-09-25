@@ -7,17 +7,17 @@ import type { Reducers } from '../reducers';
 
 // Reducers
 export type Home = {
-  +readyStatus: string,
-  +err: any,
-  +list: Array<Object>
+	+readyStatus: string,
+	+err: any,
+	+list: Array<Object>
 };
 
 export type UserInfo = {
-  +[userId: string]: {
-    +readyStatus: string,
-    +err: any,
-    +info: Object
-  }
+	+[userId: string]: {
+		+readyStatus: string,
+		+err: any,
+		+info: Object
+	}
 };
 
 // State
@@ -26,15 +26,15 @@ export type ReduxState = $ObjMap<Reducers, $ExtractFunctionReturn>; // eslint-di
 
 // Action
 export type Action =
-  | { type: 'USERS_REQUESTING' }
-  | { type: 'USERS_SUCCESS', data: Array<Object> }
-  | { type: 'USERS_FAILURE', err: any }
-  | { type: 'USER_REQUESTING', userId: string }
-  | { type: 'USER_SUCCESS', userId: string, data: Object }
-  | { type: 'USER_FAILURE', userId: string, err: any };
+	| { type: 'USERS_REQUESTING' }
+	| { type: 'USERS_SUCCESS', data: Array<Object> }
+	| { type: 'USERS_FAILURE', err: any }
+	| { type: 'USER_REQUESTING', userId: string }
+	| { type: 'USER_SUCCESS', userId: string, data: Object }
+	| { type: 'USER_FAILURE', userId: string, err: any };
 
 export type Dispatch = (
-  action: Action | ThunkAction | PromiseAction | Array<Action>
+	action: Action | ThunkAction | PromiseAction | Array<Action>
 ) => any;
 export type GetState = () => ReduxState;
 export type ThunkAction = (dispatch: Dispatch, getState: GetState) => any;

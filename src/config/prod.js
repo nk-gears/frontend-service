@@ -1,5 +1,5 @@
 /* @flow */
 
 export default {
-  // Over write default settings here...
+	// Over write default settings here...
 };

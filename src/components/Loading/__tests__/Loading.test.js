@@ -5,15 +5,15 @@ import { MemoryRouter } from 'react-router-dom';
 import Loading from '../index';
 
 describe('<Loading />', () => {
-  it('renders', () => {
-    const tree = renderer
-      .create(
-        <MemoryRouter>
-          <Loading pastDelay error={false} />
-        </MemoryRouter>
-      )
-      .toJSON();
+	it('renders', () => {
+		const tree = renderer
+			.create(
+				<MemoryRouter>
+					<Loading pastDelay error={false} />
+				</MemoryRouter>
+			)
+			.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+		expect(tree).toMatchSnapshot();
+	});
 });

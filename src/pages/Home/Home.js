@@ -13,45 +13,45 @@ type Props = { home: HomeType, fetchUsersIfNeeded: () => void };
 
 // Export this for unit testing more easily
 export class Home extends PureComponent<Props> {
-  componentDidMount() {
-    const { fetchUsersIfNeeded } = this.props;
+	componentDidMount() {
+		const { fetchUsersIfNeeded } = this.props;
 
-    fetchUsersIfNeeded();
-  }
+		fetchUsersIfNeeded();
+	}
 
-  renderUserList = () => {
-    const { home } = this.props;
+	renderUserList = () => {
+		const { home } = this.props;
 
-    if (
-      !home.readyStatus ||
-      home.readyStatus === 'USERS_INVALID' ||
-      home.readyStatus === 'USERS_REQUESTING'
-    )
-      return <p>Loading...</p>;
+		if (
+			!home.readyStatus ||
+			home.readyStatus === 'USERS_INVALID' ||
+			home.readyStatus === 'USERS_REQUESTING'
+		)
+			return <p>Loading...</p>;
 
-    if (home.readyStatus === 'USERS_FAILURE')
-      return <p>Oops, Failed to load list!</p>;
+		if (home.readyStatus === 'USERS_FAILURE')
+			return <p>Oops, Failed to load list!</p>;
 
-    return <UserList list={home.list} />;
-  };
+		return <UserList list={home.list} />;
+	};
 
-  render() {
-    return (
-      <div className={styles.Home}>
-        <Helmet title="Home" />
-        {this.renderUserList()}
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className={styles.Home}>
+				<Helmet title="Home" />
+				{this.renderUserList()}
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = ({ home }: ReduxState) => ({ home });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  fetchUsersIfNeeded: () => dispatch(usersAction.fetchUsersIfNeeded())
+	fetchUsersIfNeeded: () => dispatch(usersAction.fetchUsersIfNeeded())
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(Home);

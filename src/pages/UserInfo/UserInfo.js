@@ -6,68 +6,69 @@ import Helmet from 'react-helmet';
 
 import { userAction } from '../../actions';
 import type {
-  UserInfo as UserInfoType,
-  Dispatch,
-  ReduxState
+	UserInfo as UserInfoType,
+	Dispatch,
+	ReduxState
 } from '../../types';
 import { UserCard } from '../../components';
 import styles from './styles.scss';
 
 type Props = {
-  userInfo: UserInfoType,
-  match: Object,
-  fetchUserIfNeeded: (id: string) => void
+	userInfo: UserInfoType,
+	match: Object,
+	fetchUserIfNeeded: (id: string) => void
 };
 
 // Export this for unit testing more easily
 export class UserInfo extends PureComponent<Props> {
-  componentDidMount() {
-    const { fetchUserIfNeeded, match } = this.props;
+	componentDidMount() {
+		const { fetchUserIfNeeded, match } = this.props;
 
-    fetchUserIfNeeded(match.params.id);
-  }
+		fetchUserIfNeeded(match.params.id);
+	}
 
-  componentDidUpdate(prevProps: Object) {
-    const { fetchUserIfNeeded, match } = this.props;
+	componentDidUpdate(prevProps: Object) {
+		const { fetchUserIfNeeded, match } = this.props;
 
-    if (prevProps.match.params.id !== match.params.id) {
-      fetchUserIfNeeded(match.params.id);
-    }
-  }
+		if (prevProps.match.params.id !== match.params.id) {
+			fetchUserIfNeeded(match.params.id);
+		}
+	}
 
-  renderUserCard = () => {
-    const {
-      userInfo,
-      match: { params }
-    } = this.props;
-    const userInfoById = userInfo[params.id];
+	renderUserCard = () => {
+		const {
+			userInfo,
+			match: { params }
+		} = this.props;
+		const userInfoById = userInfo[params.id];
 
-    if (!userInfoById || userInfoById.readyStatus === 'USER_REQUESTING')
-      return <p>Loading...</p>;
+		if (!userInfoById || userInfoById.readyStatus === 'USER_REQUESTING')
+			return <p>Loading...</p>;
 
-    if (userInfoById.readyStatus === 'USER_FAILURE')
-      return <p>Oops, Failed to load info!</p>;
+		if (userInfoById.readyStatus === 'USER_FAILURE')
+			return <p>Oops, Failed to load info!</p>;
 
-    return <UserCard info={userInfoById.info} />;
-  };
+		return <UserCard info={userInfoById.info} />;
+	};
 
-  render() {
-    return (
-      <div className={styles.UserInfo}>
-        <Helmet title="User Info" />
-        {this.renderUserCard()}
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className={styles.UserInfo}>
+				<Helmet title="User Info" />
+				{this.renderUserCard()}
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = ({ userInfo }: ReduxState) => ({ userInfo });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  fetchUserIfNeeded: (id: string) => dispatch(userAction.fetchUserIfNeeded(id))
+	fetchUserIfNeeded: (id: string) =>
+		dispatch(userAction.fetchUserIfNeeded(id))
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(UserInfo);

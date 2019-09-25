@@ -14,42 +14,42 @@ axios.defaults.adapter = httpAdapter;
 const mockStore = configureMockStore([thunk]);
 
 describe('fetch users data', () => {
-  const response = [{ id: '1', name: 'Welly' }];
-  const errorMessage = 'Request failed with status code 404';
+	const response = [{ id: '1', name: 'Welly' }];
+	const errorMessage = 'Request failed with status code 404';
 
-  afterEach(() => {
-    nock.disableNetConnect();
-  });
+	afterEach(() => {
+		nock.disableNetConnect();
+	});
 
-  it('creates USERS_SUCCESS when fetching users has been done', () => {
-    nock(host)
-      .get('/test')
-      .reply(200, response);
+	it('creates USERS_SUCCESS when fetching users has been done', () => {
+		nock(host)
+			.get('/test')
+			.reply(200, response);
 
-    const expectedActions = [
-      { type: 'USERS_REQUESTING' },
-      { type: 'USERS_SUCCESS', data: response }
-    ];
-    const store = mockStore({ list: null });
+		const expectedActions = [
+			{ type: 'USERS_REQUESTING' },
+			{ type: 'USERS_SUCCESS', data: response }
+		];
+		const store = mockStore({ list: null });
 
-    store.dispatch(fetchUsers(`${host}/test`)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
-  });
+		store.dispatch(fetchUsers(`${host}/test`)).then(() => {
+			expect(store.getActions()).toEqual(expectedActions);
+		});
+	});
 
-  it('creates USERS_FAILURE when fail to fetch users', () => {
-    nock(host)
-      .get('/test')
-      .replyWithError(errorMessage);
+	it('creates USERS_FAILURE when fail to fetch users', () => {
+		nock(host)
+			.get('/test')
+			.replyWithError(errorMessage);
 
-    const expectedActions = [
-      { type: 'USERS_REQUESTING' },
-      { type: 'USERS_FAILURE', err: errorMessage }
-    ];
-    const store = mockStore({ err: null });
+		const expectedActions = [
+			{ type: 'USERS_REQUESTING' },
+			{ type: 'USERS_FAILURE', err: errorMessage }
+		];
+		const store = mockStore({ err: null });
 
-    store.dispatch(fetchUsers(`${host}/test`)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
-  });
+		store.dispatch(fetchUsers(`${host}/test`)).then(() => {
+			expect(store.getActions()).toEqual(expectedActions);
+		});
+	});
 });

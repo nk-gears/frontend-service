@@ -2,7 +2,7 @@
 
 // Allows you to precompile ES6 syntax
 require('@babel/register')({
-  plugins: ['dynamic-import-node']
+	plugins: ['dynamic-import-node']
 });
 
 // Setup global variables for server-side

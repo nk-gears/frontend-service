@@ -5,15 +5,15 @@ import { MemoryRouter } from 'react-router-dom';
 import ErrorBoundary from '../index';
 
 describe('<ErrorBoundary />', () => {
-  it('renders', () => {
-    const tree = renderer
-      .create(
-        <MemoryRouter>
-          <ErrorBoundary />
-        </MemoryRouter>
-      )
-      .toJSON();
+	it('renders', () => {
+		const tree = renderer
+			.create(
+				<MemoryRouter>
+					<ErrorBoundary />
+				</MemoryRouter>
+			)
+			.toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
+		expect(tree).toMatchSnapshot();
+	});
 });
