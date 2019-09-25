@@ -1,6 +1,6 @@
 {
 	"name": "frontend-service",
-	"version": "2.10.0",
+	"version": "0.0.1",
 	"description": "A starter boilerplate for an universal web application with the best development experience and best practices.",
 	"main": "index.js",
 	"engines": {
@@ -21,7 +21,6 @@
 		"express",
 		"webpack v4",
 		"es6",
-		"flow",
 		"code splitting",
 		"hot reloading",
 		"babel",
@@ -49,8 +48,6 @@
 		"lint": "npm-run-all --parallel lint:*",
 		"lint:js": "better-npm-run lint:js",
 		"lint:style": "better-npm-run lint:style",
-		"flow": "better-npm-run flow",
-		"flow:stop": "better-npm-run flow:stop",
 		"test": "better-npm-run test",
 		"test:watch": "yarn test --watch",
 		"test:update-snapshot": "yarn test -u",
@@ -97,12 +94,6 @@
 		"lint:style": {
 			"command": "stylelint --fix \"./**/*.css\" \"./**/*.scss\" \"!coverage\""
 		},
-		"flow": {
-			"command": "flow"
-		},
-		"flow:stop": {
-			"command": "flow stop"
-		},
 		"test": {
 			"command": "jest --coverage",
 			"env": {
@@ -139,8 +130,7 @@
 					"corejs": "3.0.0"
 				}
 			],
-			"@babel/preset-react",
-			"@babel/preset-flow"
+			"@babel/preset-react"
 		],
 		"plugins": [
 			"react-hot-loader/babel",
@@ -254,7 +244,6 @@
 			"react/require-default-props": 0,
 			"react/no-array-index-key": 0,
 			"react/jsx-wrap-multilines": 0,
-			"flowtype-errors/show-errors": "error",
 			"jsx-a11y/interactive-supports-focus": 0,
 			"jsx-a11y/no-static-element-interactions": 0,
 			"jsx-a11y/no-noninteractive-element-interactions": 0,
@@ -298,7 +287,6 @@
 		}
 	},
 	"eslintIgnore": [
-		"tools/flow",
 		"public/assets"
 	],
 	"stylelint": {
@@ -339,14 +327,13 @@
 		"collectCoverageFrom": [
 			"src/app/**/*.js",
 			"src/pages/**/*.js",
+			"src/containers/**/*.js",
 			"src/components/**/*.js",
-			"src/actions/**/*.js",
 			"src/reducers/**/*.js",
 			"!src/actions/index.js",
 			"!src/components/index.js",
 			"!src/pages/index.js",
 			"!src/pages/Home/index.js",
-			"!src/pages/UserInfo/index.js",
 			"!src/reducers/index.js"
 		],
 		"moduleNameMapper": {
@@ -368,7 +355,6 @@
 		"@babel/plugin-proposal-class-properties": "^7.5.5",
 		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
 		"@babel/preset-env": "^7.6.0",
-		"@babel/preset-flow": "^7.0.0",
 		"@babel/preset-react": "^7.0.0",
 		"@babel/register": "^7.6.0",
 		"@loadable/component": "^5.10.2",
@@ -436,7 +422,6 @@
 		"eslint-plugin-prettier": "^3.1.0",
 		"eslint-plugin-react": "^7.14.3",
 		"file-loader": "^4.2.0",
-		"flow-bin": "^0.107.0",
 		"friendly-errors-webpack-plugin": "^1.7.0",
 		"husky": "^3.0.5",
 		"identity-obj-proxy": "^3.0.0",

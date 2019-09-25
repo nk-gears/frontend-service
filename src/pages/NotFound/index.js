@@ -1,13 +1,9 @@
-/* @flow */
-
 import React from 'react';
 import Helmet from 'react-helmet';
 
 import styles from './styles.scss';
 
-type Props = { staticContext: Object };
-
-export default ({ staticContext }: Props) => {
+export default ({ staticContext }) => {
 	// We have to check if staticContext exists
 	// because it will be undefined if rendered through a BrowserRoute
 	/* istanbul ignore next */

@@ -1,5 +1,3 @@
-/* @flow */
-
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
 import Helmet from 'react-helmet';
@@ -10,9 +8,7 @@ import config from '../config';
 import 'normalize.css/normalize.css'; // eslint-disable-line import/first
 import styles from './styles.scss';
 
-type Props = { route: Object };
-
-const App = ({ route }: Props) => (
+const App = ({ route }) => (
 	<div className={styles.App}>
 		<Helmet {...config.app} />
 		<div className={styles.header}>

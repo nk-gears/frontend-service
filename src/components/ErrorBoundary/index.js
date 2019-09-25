@@ -1,26 +1,17 @@
-/* @flow */
-
 import * as React from 'react';
 
-type Props = { children?: React.Node };
-
-type State = {
-	error: Error | null,
-	errorInfo: { componentStack: string } | null
-};
-
-export default class ErrorBoundary extends React.Component<Props, State> {
+export default class ErrorBoundary extends React.Component {
 	// eslint-disable-next-line react/static-property-placement
 	static defaultProps = {
 		children: null
 	};
 
-	constructor(props: Props) {
+	constructor(props) {
 		super(props);
 		this.state = { error: null, errorInfo: null };
 	}
 
-	componentDidCatch(error: Error, errorInfo: { componentStack: string }) {
+	componentDidCatch(error, errorInfo) {
 		// Catch errors in any components below and re-render with error message
 		this.setState({
 			error,
@@ -29,7 +20,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
 		// You can also log error messages to an error reporting service here
 	}
 
-	render(): React.Node {
+	render() {
 		const { errorInfo, error } = this.state;
 		const { children } = this.props;
 		if (errorInfo) {

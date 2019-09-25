@@ -1,5 +1,3 @@
-/* @flow */
-
 import { createBrowserHistory, createMemoryHistory } from 'history';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
