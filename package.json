@@ -54,10 +54,7 @@
 		"clean": "npm-run-all --parallel clean:*",
 		"clean:build": "better-npm-run clean:build",
 		"clean:test": "better-npm-run clean:test",
-		"coveralls": "yarn clean:test && better-npm-run coveralls",
-		"docker": "yarn docker:build && yarn docker:start",
-		"docker:build": "docker build --rm -t wellyshen/react-cool-starter .",
-		"docker:start": "docker run --rm -it -p 8080:8080 wellyshen/react-cool-starter"
+		"coveralls": "yarn clean:test && better-npm-run coveralls"
 	},
 	"betterScripts": {
 		"dev": {
@@ -393,10 +390,12 @@
 		"react-router-dom": "^5.0.1",
 		"react-transition-group": "^4.3.0",
 		"redux": "^4.0.4",
+		"redux-form": "^8.2.6",
 		"redux-saga": "^1.1.1",
 		"redux-thunk": "^2.3.0",
 		"serialize-javascript": "^2.1.0",
-		"serve-favicon": "^2.5.0"
+		"serve-favicon": "^2.5.0",
+		"styled-components": "^4.4.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.6.0",

@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { testDis } from './actions';
 
-const Home = props => (
+const HomeRoot = props => (
 	<div>
-		Home
+		HomeRoot
 		<button onClick={() => props.testDis()}>asd</button>
 	</div>
 );
@@ -21,4 +21,4 @@ const withConnect = connect(
 	mapDispatchToProps
 );
 
-export default compose(withConnect)(Home);
+export default compose(withConnect)(HomeRoot);
