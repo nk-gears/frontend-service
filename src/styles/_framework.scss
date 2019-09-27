@@ -1,0 +1,820 @@
+/*
+	Basic framework to follow
+	Do not add anything to this file unless absolutely necessary
+	If you add anything, please comment your name before the custom style added
+	or Use Component Level Styles instead, cause it's not 2012 anymore
+*/
+
+html {
+	height: 100%;
+	margin: auto;
+}
+
+body {
+	margin: 0;
+	color: $color-dark-gray;
+	font-size: 10px;
+	min-height: 100%;
+	font-weight: normal;
+	background-color: $color-white;
+}
+
+body * {
+	color: inherit;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: inline-block;
+}
+
+iframe {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	border: none;
+	font-family: 'proxima-nova', sans-serif;
+}
+
+/* ----------------Start of Custom Designs---------------- */
+
+.primary-btn {
+	color: $color-white;
+	height: 50px;
+
+	@extend .radius;
+}
+
+.tertiary-btn {
+	color: $color-primary;
+	background-color: #fff;
+	border: 1px solid $color-primary;
+	height: 50px;
+
+	@extend .radius;
+}
+
+// Changing this can break a lot of things, take care
+.container {
+	padding: 0 10px;
+}
+
+.logo {
+	max-width: 100%;
+	max-height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* ---------------Start of minutes------------- */
+
+.success {
+	color: $color-green;
+}
+
+.error {
+	color: $color-red;
+}
+
+.f-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.f-sb-bw {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.f-v-center {
+	display: flex;
+	align-items: center;
+}
+
+.f-h-center {
+	display: flex;
+	justify-content: center;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.f-fd-col {
+	flex-direction: column;
+}
+
+.f-fd-row {
+	flex-direction: row;
+}
+
+.f-sb {
+	justify-content: space-between;
+}
+
+.f-sa {
+	justify-content: space-around;
+}
+
+.align-fe {
+	align-items: flex-end;
+}
+
+.f-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.object-fit-cover {
+	object-fit: cover;
+}
+
+.middle{
+	vertical-align: middle;
+}
+
+.hr {
+	border: 0;
+	height: 0;
+	margin: 0;
+	position: relative;
+	border-bottom: 1px solid $color-divider-gray;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.clear::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.shadow {
+	box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.12);
+}
+
+.shadow-bottom {
+	box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.12);
+}
+
+.shadow-light {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-heavy {
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24), 0 2px 10px rgba(0, 0, 0, 0.24);
+	-moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24), 0 2px 10px rgba(0, 0, 0, 0.24);
+	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24), 0 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+.google-shadow{
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.w-10 {
+	width: 10%;
+}
+
+.w-20 {
+	width: 20%;
+}
+
+.w-33 {
+	width: 33.33%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.w-66 {
+	width: 66.67%;
+}
+
+.w-70 {
+	width: 70%;
+}
+
+.w-80 {
+	width: 80%;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.h-50 {
+	height: 50px;
+}
+
+.h-40 {
+	height: 40px;
+}
+
+.radius {
+	border-radius: 3px;
+}
+
+.border {
+	border: solid 1px $color-divider-gray;
+}
+
+.dashed-box{
+	border: dashed 2px $color-divider-gray;
+}
+
+.border-r {
+	border-right: solid 1px $color-divider-gray;
+}
+
+.border-t {
+	border-top: solid 1px $color-divider-gray;
+}
+
+.icon-med {
+	width: auto;
+	max-height: 40px;
+	vertical-align: middle;
+}
+
+.icon {
+	width: auto;
+	max-height: 20px;
+	vertical-align: middle;
+}
+
+.icon-large {
+	width: auto;
+	max-height: 50px;
+}
+
+.icon-small {
+	width: auto;
+	max-height: 14px;
+}
+
+.icon-tiny {
+	width: auto;
+	max-height: 10px;
+}
+
+.loader-icon {
+	width: auto;
+	max-height: 50px;
+}
+
+.min-container-ht {
+	min-height: calc(100vh - 50px);
+}
+
+/* -----------------------End of minutes---------------------- */
+
+/* -----------------------Start Text Formatting---------------------- */
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.w-break {
+	word-break: break-word;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.scroll-x{
+	overflow-x: scroll;
+}
+
+.scroll-y{
+	overflow-y: scroll;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+/* -----------------------End Text Formatting----------------------- */
+
+/* -------------------------Start Fonts------------------------- */
+
+.h1 {
+	font-size: 40px;
+	margin: 0;
+}
+
+.h2 {
+	font-size: 30px;
+	margin: 0;
+}
+
+.h3 {
+	font-size: 26px;
+	font-weight: normal;
+}
+
+.h4 {
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.h5 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.h6 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.regular {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.small {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.extra-small {
+	font-size: 8px;
+	font-weight: normal;
+}
+
+.lh-small {
+	line-height: 18px;
+}
+
+.text-bold {
+	font-weight: 600;
+}
+
+.word-break {
+	word-wrap: break-word;
+}
+
+/* -------------------------End Fonts------------------------- */
+
+/* ------------------Standard Colors------------------ */
+
+.text-primary {
+	color: $color-primary;
+}
+
+.text-secondary {
+	color: $color-dark-gray;
+}
+
+.text-tertiary {
+	color: $color-gray;
+}
+
+.text-fb {
+	color: $color-facebook;
+}
+
+.gray-light {
+	color: $color-light-gray;
+}
+
+.white {
+	color: $color-white;
+}
+
+.red {
+	color: $color-red;
+}
+
+.green {
+	color: $color-green;
+}
+
+.bg-primary {
+	background-color: $color-primary;
+}
+
+.bg-primary-dark {
+	background-color: $color-primary-dark;
+}
+
+.bg-primary-light {
+	background-color: $color-primary-light;
+}
+
+.bg-dark-gray {
+	background-color: $color-dark-gray;
+}
+
+.bg-middle-gray {
+	background-color: $color-middle-gray;
+}
+
+.bg-light-gray {
+	background-color: $color-light-gray;
+}
+
+.bg-transparent {
+	background-color: $color-transparent;
+}
+
+.bg-white {
+	background-color: $color-white;
+}
+
+.dis-button-primary {
+	background-color: $color-disabled-primary;
+}
+
+.not-active {
+	pointer-events: none;
+	cursor: default;
+}
+
+/* ------------------Standard Colors------------------ */
+
+/* ---------------- Standard Buttons ---------------- */
+
+.btn-primary {
+	background-color: $color-primary;
+	color: $color-white;
+
+	@extend .radius;
+}
+
+.btn-secondary {
+	background-color: $color-white;
+	color: $color-primary;
+
+	@extend .radius;
+}
+
+/* ---------------- Standard Buttons ---------------- */
+
+/* ------------------Start Margins and Paddings-------------------- */
+
+/* Use these styles as much as possible rather than defining your own padding and margins in the scss */
+
+.p-5 {
+	padding: 5px;
+}
+
+.p-10 {
+	padding: 10px;
+}
+
+.p-t-10 {
+	padding-top: 10px;
+}
+
+.p-t-20 {
+	padding-top: 20px;
+}
+
+.p-15 {
+	padding: 15px;
+}
+
+.p-20 {
+	padding: 20px;
+}
+
+.p-5-10 {
+	padding: 5px 10px;
+}
+
+.p-v-5 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.p-v-10 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.p-v-20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.p-v-30 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.p-v-40 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.p-h-5 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.p-h-10 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.p-h-20 {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.p-l-10 {
+	padding-left: 10px;
+}
+
+.p-l-20 {
+	padding-left: 20px;
+}
+
+.p-b-10 {
+	padding-bottom: 10px;
+}
+
+.p-b-20 {
+	padding-bottom: 20px;
+}
+
+.p-r-10 {
+	padding-right: 10px;
+}
+
+.p-r-5 {
+	padding-right: 5px;
+}
+
+.p-l-5 {
+	padding-left: 5px;
+}
+
+.m-l-5 {
+	margin-left: 5px;
+}
+
+.m-l-10 {
+	margin-left: 10px;
+}
+
+.m-l-20 {
+	margin-left: 20px;
+}
+
+.m-5 {
+	margin: 5px;
+}
+
+.m-10 {
+	margin: 10px;
+}
+
+.m-20 {
+	margin: 20px;
+}
+
+.m-r-5 {
+	margin-right: 5px;
+}
+
+.m-r-10 {
+	margin-right: 10px;
+}
+
+.m-r-20 {
+	margin-right: 20px;
+}
+
+.m-t-5 {
+	margin-top: 5px;
+}
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-t-30 {
+	margin-top: 30px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.m-t-50 {
+	margin-top: 50px;
+}
+
+.m-t-60 {
+	margin-top: 60px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-b-30 {
+	margin-bottom: 30px;
+}
+
+.m-b-50 {
+	margin-bottom: 50px;
+}
+
+.m-v-50 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.m-b-20{
+	margin-bottom: 20px;
+}
+
+.m-v-20 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.m-h-10 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* ------------------End Margins and Paddings-------------------- */
+
+/* ---------------------- Icon Styles---------------------- */
+
+.fa-2x{
+	font-size: 1.5em;
+}
+
+.fa-3x{
+	font-size: 2em;
+}
+
+/* ---------------------- Icon Styles---------------------- */
+
+/* ---------------------- Almost Global Styles---------------------- */
+.auth-error{
+	color: $color-red;
+	font-size: 12px;
+	text-align: center;
+}
+
+.light-pink-bg{
+	color: $color-dark-gray;
+	padding: 10px;
+	background-color: $color-primary-light;
+	@extend .radius;
+}
+
+.frow{
+	display: flex;
+	flex-direction: row;
+}
+
+.fcol{
+	display: flex;
+	flex-direction: column;
+}
+
+input[type='text'], input[type='email'], input[type='number'], textarea {
+	-webkit-appearance: none; // solves ios bug to remove inset shadow inside input fields
+}
+
+input:-webkit-autofill {
+	box-shadow: 0 0 0 100px $color-white inset;
+	-webkit-box-shadow: 0 0 0 100px $color-white inset;
+}
+
+// Placeholder styles
+
+input::placeholder, textarea::placeholder{
+	font-size: 14px !important;
+	color: $color-gray;
+	font-family: 'proxima-nova', sans-serif;
+}
+
+.grey-border-input{
+	border-color: $color-divider-gray;
+	border-radius: 2px;
+}
+
+// Font Override
+
+.font-override{
+	font-family: 'proxima-nova', sans-serif;
+}
+
+.smooth-scroll {
+	-webkit-overflow-scrolling: touch;
+}

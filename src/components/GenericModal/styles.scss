@@ -1,0 +1,22 @@
+.escape-overlay {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+	left: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.generic-modal {
+	position: fixed;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	background: $color-white;
+}
+
+.central-modal {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
