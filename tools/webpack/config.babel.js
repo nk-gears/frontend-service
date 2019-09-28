@@ -39,7 +39,8 @@ const getPlugins = () => {
 		new webpack.DefinePlugin({
 			__CLIENT__: true,
 			__SERVER__: false,
-			__DEV__: isDev
+			__DEV__: isDev,
+			GLOBALKEYS: true
 		})
 	];
 
