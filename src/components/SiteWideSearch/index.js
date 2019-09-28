@@ -3,7 +3,7 @@ import GenericModal from '../GenericModal';
 
 const duration = 300;
 
-const TestModal = (props) => (
+const SiteWideSearch = props => (
 	<GenericModal
 		closeModal={() => props.closeModal()}
 		customPosition
@@ -24,6 +24,6 @@ const TestModal = (props) => (
 		test dasdasd
 		<div onClick={() => props.closeModal()}>close</div>
 	</GenericModal>
-)
+);
 
-export default TestModal;
+export default SiteWideSearch;

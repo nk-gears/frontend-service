@@ -3,23 +3,34 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { TransitionGroup } from 'react-transition-group';
 
-import TestModal from '../../components/TestModal';
+import SiteWideSearch from '../../components/SiteWideSearch';
+import SideNav from '../../components/SideNav';
 import { actionSpreader } from '../../utils/commonHelpers';
 import { CloseModalAction, CloseAllModalsAction } from './actions';
 
 const getModal = (type, modalProps, closeModal, i, closeAllModals) => {
 	switch (type) {
-	case 'TEST_MODAL':
+		case 'SITEWIDE_SEARCH_MODAL':
 			return (
-				<TestModal
+				<SiteWideSearch
 					{...modalProps}
 					closeAllModals={closeAllModals}
-					closeModal={(...args) => closeModal('TEST_MODAL', ...args)}
+					closeModal={(...args) => closeModal('SITEWIDE_SEARCH_MODAL', ...args)}
 					key={i}
 					modalIdx={i}
 				/>
 			);
-	default:
+		case 'SIDE_NAV_MODAL':
+			return (
+				<SideNav
+					{...modalProps}
+					closeAllModals={closeAllModals}
+					closeModal={(...args) => closeModal('SIDE_NAV_MODAL', ...args)}
+					key={i}
+					modalIdx={i}
+				/>
+			);
+		default:
 			return null;
 	}
 };

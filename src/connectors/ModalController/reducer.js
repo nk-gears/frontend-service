@@ -13,25 +13,25 @@ const initialState = {
 export default (state = initialState, action) => {
 	switch (action.type) {
 		case OPEN_EXCLUSIVE_MODAL:
-			return ({
+			return {
 				...state,
 				currentModals: [action.payload],
-			});
+			};
 		case OPEN_MODAL:
-			return ({
+			return {
 				...state,
 				currentModals: state.currentModals.concat(action.payload),
-			});
+			};
 		case CLOSE_MODAL:
-			return ({
+			return {
 				...state,
 				currentModals: state.currentModals.filter(x => x.type !== action.payload),
-			});
+			};
 		case CLOSE_ALL_MODALS:
-			return ({
+			return {
 				...state,
 				currentModals: [],
-			});
+			};
 		default:
 			return state;
 	}

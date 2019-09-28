@@ -11,4 +11,5 @@ const reducers = {
 	// form: formReducer,
 };
 
-export default history => combineReducers({ router: connectRouter(history), ...reducers });
+export default history =>
+	combineReducers({ router: connectRouter(history), ...reducers });

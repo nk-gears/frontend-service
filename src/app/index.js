@@ -29,5 +29,6 @@ const App = ({ route }) => {
 			{renderRoutes(route.routes)}
 		</div>
 	);
-}
+};
+
 export default hot(module)(App);

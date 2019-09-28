@@ -1,12 +1,7 @@
 import serialize from 'serialize-javascript';
 import { minify } from 'html-minifier';
 
-export default (
-	head,
-	extractor,
-	htmlContent,
-	initialState
-) => {
+export default (head, extractor, htmlContent, initialState) => {
 	const html = `
 		<!doctype html>
 		<html ${head.htmlAttributes.toString()}>
