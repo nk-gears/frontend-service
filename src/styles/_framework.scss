@@ -8,12 +8,12 @@
 html {
 	height: 100%;
 	margin: auto;
+	font-size: 10px;
 }
 
 body {
 	margin: 0;
-	color: $color-dark-gray;
-	font-size: 10px;
+	color: $color-graphite;
 	min-height: 100%;
 	font-weight: normal;
 	background-color: $color-white;
@@ -59,20 +59,43 @@ button{
 
 /* ----------------Start of Custom Designs---------------- */
 
-.primary-btn {
-	color: $color-white;
-	height: 50px;
-
+.standard-button {
+	padding: 1.1rem 2rem;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: 900;
+	font-family: inherit;
+	outline: 0;
+	transition: box-shadow .2s ease,background-color .2s ease;
 	@extend .radius;
 }
 
-.tertiary-btn {
-	color: $color-primary;
-	background-color: #fff;
-	border: 1px solid $color-primary;
-	height: 50px;
+.primary-btn {
+	@extend .standard-button;
 
-	@extend .radius;
+	color: $color-white;
+	background-color: $color-primary;
+	border: 1px solid $color-primary;
+
+	&:hover {
+		background-color: $color-primary-light;
+		border: 1px solid $color-primary-light;
+		box-shadow: 0 3px 10px rgba(0,0,0,.2);
+	}
+
+	&:active {
+		background-color: $color-primary-dark;
+		border: 1px solid $color-primary-dark;
+		box-shadow: 0 0 0 transparent;
+	}
+}
+
+.secondary-btn {
+	@extend .standard-button;
 }
 
 // Changing this can break a lot of things, take care
@@ -165,7 +188,7 @@ button{
 	height: 0;
 	margin: 0;
 	position: relative;
-	border-bottom: 1px solid $color-divider-gray;
+	border-bottom: 1px solid $color-goose;
 }
 
 .strike {
@@ -291,19 +314,19 @@ button{
 }
 
 .border {
-	border: solid 1px $color-divider-gray;
+	border: solid 1px $color-goose;
 }
 
 .dashed-box{
-	border: dashed 2px $color-divider-gray;
+	border: dashed 2px $color-goose;
 }
 
 .border-r {
-	border-right: solid 1px $color-divider-gray;
+	border-right: solid 1px $color-goose;
 }
 
 .border-t {
-	border-top: solid 1px $color-divider-gray;
+	border-top: solid 1px $color-goose;
 }
 
 .icon-med {
@@ -466,11 +489,11 @@ button{
 }
 
 .text-secondary {
-	color: $color-dark-gray;
+	color: $color-graphite;
 }
 
 .text-tertiary {
-	color: $color-gray;
+	color: $color-smoke;
 }
 
 .text-fb {
@@ -478,7 +501,7 @@ button{
 }
 
 .gray-light {
-	color: $color-light-gray;
+	color: $color-washed;
 }
 
 .white {
@@ -506,15 +529,11 @@ button{
 }
 
 .bg-dark-gray {
-	background-color: $color-dark-gray;
-}
-
-.bg-middle-gray {
-	background-color: $color-middle-gray;
+	background-color: $color-graphite;
 }
 
 .bg-light-gray {
-	background-color: $color-light-gray;
+	background-color: $color-washed;
 }
 
 .bg-transparent {
@@ -525,9 +544,6 @@ button{
 	background-color: $color-white;
 }
 
-.dis-button-primary {
-	background-color: $color-disabled-primary;
-}
 
 .not-active {
 	pointer-events: none;
@@ -771,7 +787,7 @@ button{
 }
 
 .light-pink-bg{
-	color: $color-dark-gray;
+	color: $color-graphite;
 	padding: 10px;
 	background-color: $color-primary-light;
 	@extend .radius;
@@ -800,12 +816,12 @@ input:-webkit-autofill {
 
 input::placeholder, textarea::placeholder{
 	font-size: 14px !important;
-	color: $color-gray;
+	color: $color-smoke;
 	font-family: 'proxima-nova', sans-serif;
 }
 
 .grey-border-input{
-	border-color: $color-divider-gray;
+	border-color: $color-goose;
 	border-radius: 2px;
 }
 

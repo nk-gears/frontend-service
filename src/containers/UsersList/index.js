@@ -2,12 +2,12 @@ import React from 'react';
 import loadable from '@loadable/component';
 import { Loading, ErrorBoundary } from '../../components';
 
-const HomeAlt = loadable(() => import('./HomeAltRoot'), {
+const UsersList = loadable(() => import('./UsersListRoot'), {
 	fallback: <Loading />
 });
 
 export default props => (
 	<ErrorBoundary>
-		<HomeAlt {...props} />
+		<UsersList {...props} />
 	</ErrorBoundary>
 );

@@ -7,6 +7,12 @@ const HomeRoot = props => (
 	<div>
 		HomeRoot
 		<button onClick={() => props.testDis()}>asd</button>
+
+		<div className="p-20">
+			<button className="primary-btn">
+				hello
+			</button>
+		</div>
 	</div>
 );
 

@@ -615,6 +615,14 @@
     "@babel/helper-regex" "^7.4.4"
     regexpu-core "^4.6.0"
 
+"@babel/polyfill@^7.2.5":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.6.0.tgz#6d89203f8b6cd323e8d946e47774ea35dc0619cc"
+  integrity sha512-q5BZJI0n/B10VaQQvln1IlDK3BTBJFbADx7tv+oXDPIDZuTo37H5Adb9jhlXm/fEN4Y7/64qD9mnrJJG7rmaTw==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.2"
+
 "@babel/preset-env@^7.6.0":
   version "7.6.2"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.6.2.tgz#abbb3ed785c7fe4220d4c82a53621d71fc0c75d3"
@@ -757,6 +765,14 @@
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.4.tgz#a87b4b04e5ae14a88d48ebef15015f6b7d1f5677"
   integrity sha512-kBa+cDHOR9jpRJ+kcGMsysrls0leukrm68DmFQoMIWQcXdr2cZvyvypWuGYT7U+9kAExUE7+T7r6G3C3A6L8MQ==
+
+"@fullpage/react-fullpage@^0.1.16":
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.16.tgz#aa78031dd94880ca59aa14d42d973f5514a72ded"
+  integrity sha512-1swdS+gxfVZlZ2XE5C1TK+NRNWKMdbkkZzaQB27RouzWbVDMOtpwVOdFbIFGUgMCjW5ba5zd7qSH3htmknFFcA==
+  dependencies:
+    "@babel/polyfill" "^7.2.5"
+    fullpage.js "^3.0.7"
 
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
@@ -2988,7 +3004,7 @@ core-js@3:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
   integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
-core-js@^2.4.0:
+core-js@^2.4.0, core-js@^2.6.5:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
   integrity sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==
@@ -4955,6 +4971,11 @@ fstream@^1.0.0, fstream@^1.0.12:
     inherits "~2.0.0"
     mkdirp ">=0.5 0"
     rimraf "2"
+
+fullpage.js@^3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-3.0.7.tgz#27d4815f39ad26019bf96dbc7644ac7ec6226f39"
+  integrity sha512-kKgwNWGUY/nMCMWuDJph2D4lSLmRqcEqD9zGR4no7e85sGLGUTdB5xWUUDZCXEp3nkPNVMOVJLFhJq5DbIY1UA==
 
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"

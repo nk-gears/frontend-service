@@ -1,7 +1,8 @@
 import App from './app';
 import Home from './containers/Home/index';
-import HomeAlt from './containers/HomeAlt/index';
+import UsersList from './containers/UsersList/index';
 import { NotFound } from './pages';
+import { getUsers } from './containers/UsersList/actions';
 
 export default [
 	{
@@ -13,9 +14,12 @@ export default [
 				component: Home,
 			},
 			{
-				path: '/home',
+				path: '/users',
 				exact: true,
-				component: HomeAlt,
+				component: UsersList,
+				loadData: () => [
+					getUsers(),
+				]
 			},
 			{
 				component: NotFound

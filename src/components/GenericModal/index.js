@@ -19,7 +19,7 @@ const ModalComponent = ({ customStyle, className, modalIdx, customPosition, chil
 )
 
 const GenericModal = ({ closeModal, children, isCrossShown, customStyle, transitionStyles, overrideBg, className, escapeOverlay, modalIdx, customPosition }) => [
-	isNotEmptyObject(transitionStyles) ? <Transition in={true} timeout={0}>
+	isNotEmptyObject(transitionStyles) ? <Transition in="true" timeout={0}>
 		{state => (
 			<ModalComponent
 				customStyle={{

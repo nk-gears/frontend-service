@@ -1,15 +1,10 @@
 .App {
-	color: $color-primary;
+	color: $color-graphite;
+	font-size: 1.4rem;
 
 	.header {
-		overflow: auto;
-		padding: 15px;
-
-		img {
-			float: left;
-			height: 50px;
-			margin-right: 1em;
-		}
+		padding: 0 15px;
+		height: 50px;
 	}
 
 	hr {

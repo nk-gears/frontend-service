@@ -2,45 +2,46 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.0",
-  "hash": "c007bd403dd9a2246a3e",
+  "hash": "6ab6d8f643258b212b62",
   "publicPath": "/assets/",
   "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
   "assetsByChunkName": {
-    "HomeAltRoot": "HomeAltRoot.js",
     "HomeRoot": "HomeRoot.js",
+    "UsersListRoot": "UsersListRoot.js",
     "main": [
       "main.css",
       "main.js"
-    ]
+    ],
+    "vendors~UsersListRoot": "vendors~UsersListRoot.js"
   },
   "assets": [
     {
-      "name": "HomeAltRoot.js",
-      "size": 3014,
+      "name": "HomeRoot.js",
+      "size": 9111,
       "chunks": [
-        "HomeAltRoot"
+        "HomeRoot"
       ],
       "chunkNames": [
-        "HomeAltRoot"
+        "HomeRoot"
       ],
       "info": {},
       "emitted": false
     },
     {
-      "name": "HomeRoot.js",
-      "size": 8650,
+      "name": "UsersListRoot.js",
+      "size": 14363,
       "chunks": [
-        "HomeRoot"
+        "UsersListRoot"
       ],
       "chunkNames": [
-        "HomeRoot"
+        "UsersListRoot"
       ],
       "info": {},
       "emitted": false
     },
     {
       "name": "main.css",
-      "size": 25331,
+      "size": 26055,
       "chunks": [
         "main"
       ],
@@ -52,12 +53,24 @@
     },
     {
       "name": "main.js",
-      "size": 8466388,
+      "size": 10199454,
       "chunks": [
         "main"
       ],
       "chunkNames": [
         "main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~UsersListRoot.js",
+      "size": 454203,
+      "chunks": [
+        "vendors~UsersListRoot"
+      ],
+      "chunkNames": [
+        "vendors~UsersListRoot"
       ],
       "info": {},
       "emitted": false
@@ -99,12 +112,14 @@
       "children": {},
       "childAssets": {}
     },
-    "HomeAltRoot": {
+    "UsersListRoot": {
       "chunks": [
-        "HomeAltRoot"
+        "vendors~UsersListRoot",
+        "UsersListRoot"
       ],
       "assets": [
-        "HomeAltRoot.js"
+        "vendors~UsersListRoot.js",
+        "UsersListRoot.js"
       ],
       "children": {},
       "childAssets": {}
@@ -117,5 +132,174 @@
       "debug": false
     }
   },
-  "children": []
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/assets/",
+      "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js??ref--5-2!node_modules/normalize.css/normalize.css"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/assets/",
+      "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!src/app/styles.scss"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/assets/",
+      "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!src/components/Loading/styles.scss"
+    },
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/assets/",
+      "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            "mini-css-extract-plugin"
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!src/pages/NotFound/styles.scss"
+    }
+  ]
 }

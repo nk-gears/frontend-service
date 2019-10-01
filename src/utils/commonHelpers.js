@@ -77,3 +77,11 @@ export const getBaseUrl = () =>
 	`${window.location.protocol}//${window.location.host}${window.location.pathname}${window.location.search}`;
 
 export const getCurrentEpochTime = () => new Date().getTime();
+
+export const encodeQueryData = (data) => {
+	const d = Object.keys(data).map(key => data[key] && [key, data[key]].map(encodeURIComponent).join("=")).join("&");
+	if (d[d.length - 1] === '&') {
+		return d.slice(0, -1);
+	}
+	return d;
+}

@@ -24,7 +24,7 @@ const App = ({ route }) => {
 		<div className="App">
 			<Helmet {...config.app} />
 			<ModalController />
-			<Header />
+			{/* <Header /> */}
 			{/* Child routes won't render without this */}
 			{renderRoutes(route.routes)}
 		</div>
