@@ -1,35 +1,45 @@
 import React from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
+import { fetchFilteredUsers } from '../../containers/UserList/thunk';
 
-const FullPageScroll = (props) => (
-	<ReactFullpage
-		scrollingSpeed={1000} /* Options here */
+class FullPageScroll extends React.PureComponent {
 
-		render={({ state, fullpageApi }) => {
-			return (
-				<ReactFullpage.Wrapper>
-					<div className="section">
-						<p>Section 1 (welcome to fullpage.js)</p>
-						<button onClick={() => fullpageApi.moveSectionDown()}>
-							Click me to move down
-						</button>
-					</div>
-					<div className="section">
-						<p>Section 2</p>
-					</div>
-					<div className="section">
-						<p>Section 3</p>
-					</div>
-					<div className="section">
-						<p>Section 4</p>
-					</div>
-					<div className="section">
-						<p>Section 5</p>
-					</div>
-				</ReactFullpage.Wrapper>
-			);
-		}}
-	/>
-)
+	constructor(props) {
+		super(props);
+		this.onLeave = this.onLeave.bind(this);
+		// this.afterLoad = this.afterLoad.bind(this);
+	}
+	onLeave(origin, destination, direction) {
+		console.log('onLeave', { origin, destination, direction });
+		if (origin.index === this.props.total - 2) {
+			console.log('object', origin.index, this.props.total);
+			this.props.fetchMoreData();
+		}
+		// arguments are mapped in order of fullpage.js callback arguments do something
+		// with the event
+	}
+	// afterLoad(origin, destination, direction) {
+	// 	console.log("After load: " + destination.index, origin, destination, direction);
+	// }
+	render() {
+		const { props, onLeave } = this;
+		return (
+			<ReactFullpage
+				scrollingSpeed={1000}
+				onLeave={onLeave}
+				// afterLoad={afterLoad}
+				render={({ state, fullpageApi }) => {
+					return (
+						<ReactFullpage.Wrapper>
+							{props.data.map(x => <div className="section">
+								{x.first_name} {x.last_name}
+							</div>)}
+						</ReactFullpage.Wrapper>
+					);
+				}}
+			/>
+		)
+	}
+}
 
 export default FullPageScroll;

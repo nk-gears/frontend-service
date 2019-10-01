@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.0",
-  "hash": "54a28695a84f1e5fc800",
+  "hash": "33c36775d6e19bbaacd1",
   "publicPath": "/assets/",
   "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
   "assetsByChunkName": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "UserListRoot.js",
-      "size": 14552,
+      "size": 23734,
       "chunks": [
         "UserListRoot"
       ],
@@ -53,7 +53,7 @@
     },
     {
       "name": "main.js",
-      "size": 10311293,
+      "size": 10318991,
       "chunks": [
         "main"
       ],

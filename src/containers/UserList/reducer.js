@@ -5,6 +5,7 @@ import {
 	GET_FILTERED_USERS_SUCCESS,
 	GET_FILTERED_USERS_ERROR,
 	TOGGLE_FILTERED_USERS_STATUS,
+	SET_API_OBJECT,
 } from './constants';
 
 const initialState = {
@@ -54,6 +55,14 @@ function userListReducer(state = initialState, action) {
 			return {
 				...state,
 				filteredLoading: action.payload.filteredLoading,
+			};
+		case SET_API_OBJECT:
+			return {
+				...state,
+				apiObject: {
+					...state.apiObject,
+					...action.payload.apiObject,
+				},
 			};
 		default:
 			return state;

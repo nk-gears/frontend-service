@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import FullPageScroll from '../../components/FullPageScroll';
 // import { getUsers } from './actions';
-import { fetchUsersIfNeeded } from './thunk';
+import { fetchUsersIfNeeded, fetchFilteredUsers } from './thunk';
 
 const UserListRoot = (props) => {
 	React.useEffect(() => {
@@ -11,16 +11,22 @@ const UserListRoot = (props) => {
 	}, []);
 	return (
 		<div>
-			test
 			{console.log('incomp users', props.users)}
-			{props.users.map(u => <div>{u.first_name}</div>)}
-			{/* <FullPageScroll /> */}
+			{/* {props.users.map(u => <div>{u.first_name}</div>)} */}
+			<FullPageScroll
+				data={props.users}
+				total={props.users.length}
+				dispatch={props.dispatch}
+				fetchMoreData={props.fetchFilteredUsers}
+			/>
 		</div>
 	);
 }
 
 const mapDispatchToProps = dispatch => ({
+	dispatch,
 	fetchUsersIfNeeded: () => dispatch(fetchUsersIfNeeded()),
+	fetchFilteredUsers: () => dispatch(fetchFilteredUsers()),
 });
 
 const mapStateToProps = state => ({
