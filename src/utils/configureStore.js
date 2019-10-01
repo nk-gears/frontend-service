@@ -3,11 +3,12 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
+import sagaMonitor from '@redux-saga/simple-saga-monitor';
 
 import createRootReducer from '../reducers';
 import coreSaga from '../sagas/index';
 
-const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
 export default ({ initialState, url, isMobile }) => {
 	const isServer = typeof window === 'undefined';

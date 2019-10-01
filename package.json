@@ -358,6 +358,7 @@
 		"@fullpage/react-fullpage": "^0.1.16",
 		"@loadable/component": "^5.10.2",
 		"@loadable/server": "^5.10.2",
+		"@redux-saga/simple-saga-monitor": "^1.1.0",
 		"asset-require-hook": "^1.2.0",
 		"autoprefixer": "^9.6.1",
 		"axios": "^0.19.0",

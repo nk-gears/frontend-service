@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import FullPageScroll from '../../components/FullPageScroll';
-import { getUsers } from './actions';
+// import { getUsers } from './actions';
+import { fetchUsersIfNeeded } from './thunk';
 
-const UsersListRoot = (props) => {
+const UserListRoot = (props) => {
 	React.useEffect(() => {
-		props.getUsers();
+		props.fetchUsersIfNeeded();
 	}, []);
 	return (
 		<div>
+			test
 			{console.log('incomp users', props.users)}
 			{props.users.map(u => <div>{u.first_name}</div>)}
 			{/* <FullPageScroll /> */}
@@ -18,7 +20,7 @@ const UsersListRoot = (props) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-	getUsers: () => dispatch(getUsers()),
+	fetchUsersIfNeeded: () => dispatch(fetchUsersIfNeeded()),
 });
 
 const mapStateToProps = state => ({
@@ -27,4 +29,4 @@ const mapStateToProps = state => ({
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-export default compose(withConnect)(React.memo(UsersListRoot));
+export default compose(withConnect)(React.memo(UserListRoot));

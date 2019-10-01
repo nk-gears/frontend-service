@@ -2,17 +2,17 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.0",
-  "hash": "6ab6d8f643258b212b62",
+  "hash": "54a28695a84f1e5fc800",
   "publicPath": "/assets/",
   "outputPath": "/Users/deepankagarwal/Documents/ivy-pods/frontend-service/public/assets",
   "assetsByChunkName": {
     "HomeRoot": "HomeRoot.js",
-    "UsersListRoot": "UsersListRoot.js",
+    "UserListRoot": "UserListRoot.js",
     "main": [
       "main.css",
       "main.js"
     ],
-    "vendors~UsersListRoot": "vendors~UsersListRoot.js"
+    "vendors~UserListRoot": "vendors~UserListRoot.js"
   },
   "assets": [
     {
@@ -28,13 +28,13 @@
       "emitted": false
     },
     {
-      "name": "UsersListRoot.js",
-      "size": 14363,
+      "name": "UserListRoot.js",
+      "size": 14552,
       "chunks": [
-        "UsersListRoot"
+        "UserListRoot"
       ],
       "chunkNames": [
-        "UsersListRoot"
+        "UserListRoot"
       ],
       "info": {},
       "emitted": false
@@ -53,7 +53,7 @@
     },
     {
       "name": "main.js",
-      "size": 10199454,
+      "size": 10311293,
       "chunks": [
         "main"
       ],
@@ -64,13 +64,13 @@
       "emitted": false
     },
     {
-      "name": "vendors~UsersListRoot.js",
-      "size": 454203,
+      "name": "vendors~UserListRoot.js",
+      "size": 454202,
       "chunks": [
-        "vendors~UsersListRoot"
+        "vendors~UserListRoot"
       ],
       "chunkNames": [
-        "vendors~UsersListRoot"
+        "vendors~UserListRoot"
       ],
       "info": {},
       "emitted": false
@@ -112,14 +112,14 @@
       "children": {},
       "childAssets": {}
     },
-    "UsersListRoot": {
+    "UserListRoot": {
       "chunks": [
-        "vendors~UsersListRoot",
-        "UsersListRoot"
+        "vendors~UserListRoot",
+        "UserListRoot"
       ],
       "assets": [
-        "vendors~UsersListRoot.js",
-        "UsersListRoot.js"
+        "vendors~UserListRoot.js",
+        "UserListRoot.js"
       ],
       "children": {},
       "childAssets": {}

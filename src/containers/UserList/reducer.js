@@ -18,7 +18,7 @@ const initialState = {
 	error: null,
 };
 
-function usersListReducer(state = initialState, action) {
+function userListReducer(state = initialState, action) {
 	console.log(action);
 	switch (action.type) {
 		case GET_USERS_SUCCESS:
@@ -60,4 +60,4 @@ function usersListReducer(state = initialState, action) {
 	}
 }
 
-export default usersListReducer;
+export default userListReducer;

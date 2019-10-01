@@ -16,7 +16,7 @@ function* getUsersSaga({ payload }) {
 	try {
 
 		const res = yield call(requestSaga, 'GET', apiGetUsers(apiObject.pageSize, apiObject.lastId));
-		console.log('object', res.data, res);
+		console.log('object', res.data, __SERVER__);
 		if (res.status === ResponseStatus.OK) {
 			yield put(getUsersSuccess(accessDeepObject('data.data', res)));
 		}

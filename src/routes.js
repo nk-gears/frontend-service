@@ -1,8 +1,9 @@
 import App from './app';
 import Home from './containers/Home/index';
-import UsersList from './containers/UsersList/index';
+import UserList from './containers/UserList';
 import { NotFound } from './pages';
-import { getUsers } from './containers/UsersList/actions';
+import { getUsers } from './containers/UserList/actions';
+import { fetchUsersIfNeeded } from './containers/UserList/thunk';
 
 export default [
 	{
@@ -16,9 +17,10 @@ export default [
 			{
 				path: '/users',
 				exact: true,
-				component: UsersList,
+				component: UserList,
 				loadData: () => [
-					getUsers(),
+					// getUsers(),
+					fetchUsersIfNeeded(),
 				]
 			},
 			{
